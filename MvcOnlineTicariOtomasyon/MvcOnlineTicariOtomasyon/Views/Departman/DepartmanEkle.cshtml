@@ -1,0 +1,17 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Departman
+@{
+    ViewBag.Title = "DepartmanEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Departman Ekle</h2>
+<br />
+<form class="form-group" method="post">
+    <label>Departman Adı</label>
+    <input type="text" name="DepartmanAd" class="form-control" maxlength="30" required />
+    <input  type="hidden" name="Durum" value="true"/>
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
+

@@ -1,0 +1,31 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Personel
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Personeller</h2>
+
+<br />
+
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Personelid)
+    @Html.Label("Personel Adı")
+    @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonelAd, "", new { style = "color:red; font-weight:bold;" })
+    <br />
+    @Html.Label("Personel Soyad")
+    @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonelSoyad, "", new { style = "color:red; font-weight:bold;" })
+    <br />
+    @Html.LabelFor(x => x.PersonelGorsel)
+    @Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonelGorsel, "", new { style = "color:red; font-weight:bold;" })
+    <br />
+    @Html.Label("Departman")
+    @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dpr1, new { @class = "form-control", @style = "color:red" })
+
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+}

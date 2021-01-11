@@ -1,0 +1,27 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.FaturaKalem
+@{
+    ViewBag.Title = "YeniKalem";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Yeni Kalem Ekle</h2>
+
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Açıklama")
+    <input class="form-control" type="text" name="Aciklama" />
+    <br />
+    @Html.Label("Miktar")
+    <input class="form-control" type="text" name="Miktar" maxlength="30" required />
+    <br />
+    @Html.Label("Birim Fiyat")
+    <input class="form-control" type="text" name="BirimFiyat" maxlength="30" required />
+    <br />
+    @Html.Label("Tutar")
+    <input class="form-control" type="text" name="Tutar" maxlength="30" required />
+    <br />
+    @Html.Label("Fatura ID")
+<input class="form-control" type="text" value="@Session["asd"]" name="BirimFiyat" maxlength="30" required />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>

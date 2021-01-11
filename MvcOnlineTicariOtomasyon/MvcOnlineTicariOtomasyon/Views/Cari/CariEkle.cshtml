@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "CariEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Cari Ekle</h2>
+<br />
+<form class="form-group" method="post">
+    <label>Cari Adı</label>
+    <input type="text" name="CariAd" class="form-control" maxlength="30" required />
+    <label>Cari Soyadı</label>
+    <input type="text" name="CariSoyad" class="form-control" maxlength="30" required/>
+    <label>Cari Şehir</label>
+    <input type="text" name="CariSehir" class="form-control" maxlength="13" required/>
+    <label>Cari Mail</label>
+    <input type="email" name="CariMail" class="form-control" maxlength="50" required/>
+    <input type="hidden" name="Durum" value="true" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
